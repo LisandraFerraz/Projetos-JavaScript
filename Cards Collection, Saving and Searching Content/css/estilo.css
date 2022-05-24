@@ -1,8 +1,12 @@
-body {
-    margin:0;
-    height: 100vh;
-
+*{
+    margin: 0;
+    padding: 0;
 }
+
+body{
+    background-color: rgb(246, 190, 190);
+}
+
 
 /*cabeçalho*/
 header{
@@ -23,18 +27,16 @@ header{
     height: 30px;
 }
 
-main{
-    margin: 20px 20px;
-}
 
 /*cards*/
-
 .shows-collection{
     position: relative;
     overflow: hidden;
 }
 
 .cards-group{
+    width: 70%;
+    padding: 10px;
     display: flex;
     overflow-x: auto;
     scroll-behavior: smooth;
@@ -51,7 +53,11 @@ main{
     width: 250px;
     background-color: #f2f2f2;
     border-radius: 15px;
-    box-shadow: 0 5px 5px rgb(97, 97, 97, 0.5);
+}
+
+.card:hover{
+    box-shadow: 0 0 10px rgb(97, 97, 97, 0.5);
+    transition: 0.2s linear;
 }
 
 .card-title{
@@ -90,6 +96,140 @@ main{
     color:#ff7300;
 }
 
-footer{
-    background-color: blueviolet;
+/*container*/
+.content-container{
+    display: flex;
+    min-height: 100vh;
+}
+
+/*sidebar*/
+.sidebar{
+    flex: 1 1 0;
+    background-color: rgb(54, 178, 240);
+    padding: 10px 5px;
+}
+
+.sidebar h3{
+    color: #222222;
+    font-size: 22px;
+    text-transform: uppercase;
+    padding: 10px;
+    margin-bottom: 5px;
+}
+
+.sidebar .menu-nav .menu-item{
+    display: block;
+
+    padding: 10px;
+    color: #662e01;
+    text-decoration: none;
+    transition: 0.1s linear;
+}
+
+.sidebar .menu-nav .menu-item:hover,
+    .sidebar .menu-nav .menu-item.is-active{
+    color: bisque;
+    border-left: 5px solid bisque;
+}
+
+.main-section{
+    grid-area: main;
+    flex: 1 1 0;
+    padding: 2rem;
+}
+
+.main-section h1{
+    color: red;
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+.main-section p{
+    color: #ff7300;
+}
+
+/*toggle para chamar sidebar*/
+.menu-hamb{
+    display: none;
+    position: fixed;
+    top: 90px;
+    left: 30px;
+    width: 60px;
+    height: 60px;
+    border-radius: 99px;
+    background-color: #000000;
+    cursor: pointer;
+}
+
+.hamburguer{
+    position: relative;
+    top: calc(50% - 2px);
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 32px;
+}
+
+.hamburguer > span,
+.hamburguer > span::before,
+.hamburguer > span::after{
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    border-radius: 99px;
+    background-color: #f2f2f2;
+    transition-duration: .25s;
+}
+
+.hamburguer > span::before{
+    content: '';
+    top: -8px;
+}
+
+.hamburguer > span::after{
+    content: '';
+    top: 8px;
+}
+
+.menu-hamb.is-active .hamburguer > span{
+    transform: rotate(45deg);
+}
+
+.menu-hamb.is-active .hamburguer > span::before{
+    top: 0;
+    transform: rotate(0deg);
+}
+
+.menu-hamb.is-active .hamburguer > span::after{
+    top: 0;
+    transform: rotate(90deg);
+}
+
+/*menu responsivo*/
+@media (max-width: 1024px){
+    .sidebar{
+        max-width: 200px;
+    }
+}
+
+@media (max-width: 768px){
+    .menu-hamb{
+        display: block;
+    }
+    .main-section{
+        padding-top: 110px;
+    }
+    .sidebar{
+        position: fixed;
+        top: 0;
+        left: -310px;
+        height: 100vh;
+        width: 100%;
+        max-width: 300px;
+        transition: 0.2s linear;
+    }
+
+    .menu-item.is-active{
+        left: 0;
+    }
 }
