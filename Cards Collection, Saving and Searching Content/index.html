@@ -13,27 +13,35 @@
   </head>
 
   <body>
-      <header>
+    <header>
 
-      <form>
-        <input
-          type="text"
-          class="search-bar"
-          placeholder="Digite o nome de um programa..."
-        />
-        <button id="btnAddShow" class="btnInserir">Salvar</button>
-      </form>
-    </header>
-
-    <div class="content-container">
-
-      <div class="menu-hamb">
-        <div class="hamburguer">
-          <span></span>
-        </div>
+      <div class="menu-toggle">
+        <a href="#">
+          <img src="resources/black_toggle.svg" alt="" srcset="" />
+        </a>
       </div>
 
-      <aside class="sidebar">
+      <div class="search-group">
+        <form>
+          <input
+            type="text"
+            placeholder="Digite o nome de um programa..."
+            class="search-bar"
+          />
+          <button id="btnAddShow" class="btnInserir">Salvar</button>
+        </form>
+      </div>
+      
+    </header>
+
+    <!-- <div class="menu-hamb">
+      <div class="hamburguer">
+        <span></span>
+      </div>
+    </div> -->
+
+    <aside class="sidebar">
+      <div class="items-group">
         <h3>Explorar</h3>
         <nav class="menu-nav">
           <a href="" class="menu-item is-active">Veja esse link!</a>
@@ -41,94 +49,16 @@
           <a href="" class="menu-item">Visite esse também!</a>
           <a href="" class="menu-item">Ah, esse por último :D</a>
         </nav>
-      </aside>
+      </div>
+    </aside>
 
-        <main class="main-section">
-          <!--
+    <main class="main-section">
+      
           <section class="shows-collection">
             <div class="cards-group">
 
               <div class="card">
-                <img src="img/wandavision.jpg" alt="" class="card-img" />
-                <div class="card-description">
-                  <p class="card-title">Wandavision</p>
-                  <p>
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                    Eos fugiat, possimus reiciendis minus porro adipisci!
-                  </p>
-                </div>
-              </div>
-
-              <div class="card">
-                <img src="img/wandavision.jpg" alt="" class="card-img" />
-                <div class="card-description">
-                  <p class="card-title">Wandavision</p>
-                  <p>
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                    Eos fugiat, possimus reiciendis minus porro adipisci!
-                  </p>
-                </div>
-              </div>
-
-              <div class="card">
-                <img src="img/wandavision.jpg" alt="" class="card-img" />
-                <div class="card-description">
-                  <p class="card-title">Wandavision</p>
-                  <p>
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                    Eos fugiat, possimus reiciendis minus porro adipisci!
-                  </p>
-                </div>
-              </div>
-
-              <div class="card">
-                <div class="image">
-                  <img src="img/who.jpg" alt="" class="card-img" />
-                </div>
-                <div class="card-description">
-                  <p class="card-title">Doctor Who</p>
-                  <p>
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                    Eos fugiat, possimus reiciendis minus porro adipisci!
-                  </p>
-                </div>
-              </div>
-
-              <div class="card">
-                <img src="img/wandavision.jpg" alt="" class="card-img" />
-                <div class="card-description">
-                  <p class="card-title">Wandavision</p>
-                  <p>
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                    Eos fugiat, possimus reiciendis minus porro adipisci!
-                  </p>
-                </div>
-              </div>
-
-              <div class="card">
-                <img src="img/wandavision.jpg" alt="" class="card-img" />
-                <div class="card-description">
-                  <p class="card-title">Wandavision</p>
-                  <p>
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                    Eos fugiat, possimus reiciendis minus porro adipisci!
-                  </p>
-                </div>
-              </div>
-
-              <div class="card">
-                <img src="img/wandavision.jpg" alt="" class="card-img" />
-                <div class="card-description">
-                  <p class="card-title">Wandavision</p>
-                  <p>
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                    Eos fugiat, possimus reiciendis minus porro adipisci!
-                  </p>
-                </div>
-              </div>
-
-              <div class="card">
-                <img src="img/wandavision.jpg" alt="" class="card-img" />
+                <img src="resources/wandavision.jpg" alt="" class="card-img" />
                 <div class="card-description">
                   <p class="card-title">Wandavision</p>
                   <p>
@@ -148,16 +78,15 @@
               </button>
             </div>
           </section>
-    -->
-          <h1>Titulo</h1>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas rem
-            pariatur, nam recusandae debitis est eius. Dolor similique assumenda
-            quo sapiente error nisi aliquid ab officiis consequatur. Ullam,
-            reprehenderit voluptate.
-          </p>
-        </main>
-    </div>
+   
+      <h1>Titulo</h1>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas rem
+        pariatur, nam recusandae debitis est eius. Dolor similique assumenda quo
+        sapiente error nisi aliquid ab officiis consequatur. Ullam,
+        reprehenderit voluptate.
+      </p>
+    </main>
 
     <script src="js/script.js"></script>
   </body>

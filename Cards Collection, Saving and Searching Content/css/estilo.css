@@ -7,26 +7,25 @@ body{
     background-color: rgb(246, 190, 190);
 }
 
-
 /*cabeçalho*/
 header{
-    position: relative;
+    width: calc(100%-255px);
+    margin-left: 255px;
+    display: flex;
 
     background-color: #ff7300;
-    display: flex;
-    padding: 20px 20px;
+    padding: 40px 20px;
 }
 
 .search-bar{
-    width: 320px;
-    height: 25px;
+    width: 420px;
+    height: 35px;
 }
 
 .btnInserir{
-    width: 85px;
-    height: 30px;
+    width: 95px;
+    height: 39px;
 }
-
 
 /*cards*/
 .shows-collection{
@@ -35,7 +34,7 @@ header{
 }
 
 .cards-group{
-    width: 70%;
+    /* width: 70%; */
     padding: 10px;
     display: flex;
     overflow-x: auto;
@@ -96,17 +95,33 @@ header{
     color:#ff7300;
 }
 
-/*container*/
-.content-container{
-    display: flex;
-    min-height: 100vh;
+/*hamburguer*/
+
+.menu-toggle img{
+    height: 25px;
+    margin-right: 15px;
+    margin-top: 6px;
+    transition: all 0.5s ease;
 }
 
 /*sidebar*/
 .sidebar{
-    flex: 1 1 0;
     background-color: rgb(54, 178, 240);
-    padding: 10px 5px;
+    /* padding: 50px 10px; */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 255px;
+    height: 100%;
+    transition: all 0.6s ease;
+}
+
+.items-group{
+    margin: 30px 20px;
+}
+
+.items-group nav {
+    margin-top: 30px;
 }
 
 .sidebar h3{
@@ -133,9 +148,9 @@ header{
 }
 
 .main-section{
-    grid-area: main;
-    flex: 1 1 0;
-    padding: 2rem;
+    width: calc(100%-255px);
+    margin-left: 255px;
+    padding: 50px;
 }
 
 .main-section h1{
@@ -148,76 +163,31 @@ header{
     color: #ff7300;
 }
 
-/*toggle para chamar sidebar*/
-.menu-hamb{
-    display: none;
-    position: fixed;
-    top: 90px;
-    left: 30px;
-    width: 60px;
-    height: 60px;
-    border-radius: 99px;
-    background-color: #000000;
-    cursor: pointer;
+/* ao clicar no toggle */
+body.active .sidebar{
+    left: -255px;
 }
 
-.hamburguer{
-    position: relative;
-    top: calc(50% - 2px);
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 32px;
-}
-
-.hamburguer > span,
-.hamburguer > span::before,
-.hamburguer > span::after{
-    display: block;
-    position: absolute;
+body.active header,
+body.active .main-section {
+    margin-left: 0;
     width: 100%;
-    height: 4px;
-    border-radius: 99px;
-    background-color: #f2f2f2;
-    transition-duration: .25s;
+    transition: all 0.5s ease;
 }
 
-.hamburguer > span::before{
-    content: '';
-    top: -8px;
-}
-
-.hamburguer > span::after{
-    content: '';
-    top: 8px;
-}
-
-.menu-hamb.is-active .hamburguer > span{
-    transform: rotate(45deg);
-}
-
-.menu-hamb.is-active .hamburguer > span::before{
-    top: 0;
-    transform: rotate(0deg);
-}
-
-.menu-hamb.is-active .hamburguer > span::after{
-    top: 0;
-    transform: rotate(90deg);
-}
-
-/*menu responsivo*/
-@media (max-width: 1024px){
-    .sidebar{
-        max-width: 200px;
-    }
-}
-
-@media (max-width: 768px){
+/* responsivo */
+/* @media (max-width: 768px){
     .menu-hamb{
         display: block;
     }
     .main-section{
         padding-top: 110px;
+    }
+    body.active header,
+    body.active .main-section {
+    margin-left: 0;
+    width: 100%;
+    transition: all 0.5s ease;
     }
     .sidebar{
         position: fixed;
@@ -232,4 +202,4 @@ header{
     .menu-item.is-active{
         left: 0;
     }
-}
+}   */
