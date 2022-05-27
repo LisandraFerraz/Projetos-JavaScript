@@ -1,30 +1,62 @@
 *{
     margin: 0;
     padding: 0;
+    font-family: 'Poppins', Verdana, sans-serif;
 }
 
 body{
-    background-color: rgb(246, 190, 190);
+    background-color: rgb(46, 46, 46)
 }
 
 /*cabeçalho*/
 header{
     width: calc(100%-255px);
-    margin-left: 255px;
+    margin: 55px 65px 0 315px;
+    padding: 40px 20px;
     display: flex;
 
-    background-color: #ff7300;
-    padding: 40px 20px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.633);
+    background-color: #1e9f8d;
 }
 
 .search-bar{
     width: 420px;
     height: 35px;
+    border-radius: 5px;
+    margin: 0 10px;
+}
+
+input.search-bar{
+    padding: 0 10px;
+    font-size: 14px;
+    border: none;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.581);
+}
+
+input.search-bar:hover{
+    transition: all 0.3s ease;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.751);
+}
+
+input.search-bar:focus{
+    background-color: #eef4f6;
+    border: solid 1px #fff;
 }
 
 .btnInserir{
     width: 95px;
-    height: 39px;
+    height: 35px;
+    background-color: #f4f4f4;
+    font-size: 14px;
+    border-radius: 5px;
+    border: none;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.581);
+}
+
+.btnInserir:hover{
+    background-color: #f0f0f0;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.751);
 }
 
 /*cards*/
@@ -35,7 +67,7 @@ header{
 
 .cards-group{
     /* width: 70%; */
-    padding: 10px;
+    padding: 5px;
     display: flex;
     overflow-x: auto;
     scroll-behavior: smooth;
@@ -48,26 +80,40 @@ header{
 .card{
     flex: 0 0 auto;
     margin: 0 5px;
-    padding: 6px;
+    padding: 15px 0;
     width: 250px;
-    background-color: #f2f2f2;
+    background-color: #3e3e3e;
     border-radius: 15px;
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.463);
 }
 
 .card:hover{
-    box-shadow: 0 0 10px rgb(97, 97, 97, 0.5);
-    transition: 0.2s linear;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.529);
+    transition: all 0.1s ease;
 }
 
+/* .card:hover img {
+    transform: scale(1.01);
+    transition: all 0.3s;
+} */
+
 .card-title{
+    text-shadow: 0 0 12px rgba(0, 0, 0, 0.389);
+    color: #e0e0e0;
     text-align: center;
+    margin-bottom: 15px;
     font: normal 600 16px/1.5 Verdana, sans-serif;
 }
 
 .card-description{
-    padding: 0 15px;
+    padding: 15px 20px;
+    color: #d4d4d4;
     text-align: justify;
-    font: normal 14px/1.5 Verdana, sans-serif;
+    font: normal 14px/1.7 Verdana, sans-serif;
+}
+
+.card-img img {
+    box-shadow: 0 0 32px rgba(0, 0, 0, 0.463);
 }
 
 .card-img{
@@ -85,28 +131,34 @@ header{
     text-align: center;
 }
 
+.btnSlide button{
+    background-color: transparent;
+    border: none;
+    margin: 0 10px;
+}
+
 .btnSides{
-    font-size: 22px;
+    font-size: 35px;
     font-weight: 800;
-    color: red;
+    color: #eeeeee;
 }
 
 .btnSides:hover{
-    color:#ff7300;
+    color:#b3b3b3;
 }
 
 /*hamburguer*/
 
 .menu-toggle img{
     height: 25px;
-    margin-right: 15px;
-    margin-top: 6px;
+    margin: 6px 15px 0 15px;
     transition: all 0.5s ease;
 }
 
 /*sidebar*/
 .sidebar{
-    background-color: rgb(54, 178, 240);
+    background-color: #1e9f8d;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.633);
     /* padding: 50px 10px; */
     position: fixed;
     top: 0;
@@ -136,58 +188,123 @@ header{
     display: block;
 
     padding: 10px;
-    color: #662e01;
+    color: rgba(255, 255, 255, 0.502);
     text-decoration: none;
     transition: 0.1s linear;
 }
 
 .sidebar .menu-nav .menu-item:hover,
     .sidebar .menu-nav .menu-item.is-active{
-    color: bisque;
-    border-left: 5px solid bisque;
+    color: #fff;
+    border-left: 5px solid #fff;
 }
 
 .main-section{
-    width: calc(100%-255px);
+    width: calc(100%-235px);
     margin-left: 255px;
-    padding: 50px;
+    margin: 30px 70px 0 330px;
 }
 
-.main-section h1{
-    color: red;
-    font-size: 30px;
-    margin-bottom: 10px;
-}
-
-.main-section p{
-    color: #ff7300;
-}
-
-/* ao clicar no toggle */
 body.active .sidebar{
     left: -255px;
 }
 
 body.active header,
 body.active .main-section {
-    margin-left: 0;
-    width: 100%;
+    margin-left: 55px;
     transition: all 0.5s ease;
 }
 
-/* responsivo */
-/* @media (max-width: 768px){
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*toggle para chamar sidebar*/
+/* .menu-hamb{
+    display: none;
+    position: fixed;
+    top: 90px;
+    left: 30px;
+    width: 60px;
+    height: 60px;
+    border-radius: 99px;
+    background-color: #000000;
+    cursor: pointer;
+}
+
+.hamburguer{
+    position: relative;
+    top: calc(50% - 2px);
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 32px;
+}
+
+.hamburguer > span,
+.hamburguer > span::before,
+.hamburguer > span::after{
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    border-radius: 99px;
+    background-color: #f2f2f2;
+    transition-duration: .25s;
+}
+
+.hamburguer > span::before{
+    content: '';
+    top: -8px;
+}
+
+.hamburguer > span::after{
+    content: '';
+    top: 8px;
+}
+
+.menu-hamb.is-active .hamburguer > span{
+    transform: rotate(45deg);
+}
+
+.menu-hamb.is-active .hamburguer > span::before{
+    top: 0;
+    transform: rotate(0deg);
+}
+
+.menu-hamb.is-active .hamburguer > span::after{
+    top: 0;
+    transform: rotate(90deg);
+}
+
+/*menu responsivo*/
+/* @media (max-width: 1024px){
+    .sidebar{
+        max-width: 200px;
+    }
+}
+
+@media (max-width: 768px){
     .menu-hamb{
         display: block;
     }
     .main-section{
         padding-top: 110px;
-    }
-    body.active header,
-    body.active .main-section {
-    margin-left: 0;
-    width: 100%;
-    transition: all 0.5s ease;
     }
     .sidebar{
         position: fixed;
@@ -202,4 +319,4 @@ body.active .main-section {
     .menu-item.is-active{
         left: 0;
     }
-}   */
+}  */
