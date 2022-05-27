@@ -215,108 +215,41 @@ body.active .main-section {
     transition: all 0.5s ease;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /*toggle para chamar sidebar*/
-/* .menu-hamb{
-    display: none;
-    position: fixed;
-    top: 90px;
-    left: 30px;
-    width: 60px;
-    height: 60px;
-    border-radius: 99px;
-    background-color: #000000;
-    cursor: pointer;
-}
-
-.hamburguer{
-    position: relative;
-    top: calc(50% - 2px);
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 32px;
-}
-
-.hamburguer > span,
-.hamburguer > span::before,
-.hamburguer > span::after{
-    display: block;
-    position: absolute;
-    width: 100%;
-    height: 4px;
-    border-radius: 99px;
-    background-color: #f2f2f2;
-    transition-duration: .25s;
-}
-
-.hamburguer > span::before{
-    content: '';
-    top: -8px;
-}
-
-.hamburguer > span::after{
-    content: '';
-    top: 8px;
-}
-
-.menu-hamb.is-active .hamburguer > span{
-    transform: rotate(45deg);
-}
-
-.menu-hamb.is-active .hamburguer > span::before{
-    top: 0;
-    transform: rotate(0deg);
-}
-
-.menu-hamb.is-active .hamburguer > span::after{
-    top: 0;
-    transform: rotate(90deg);
-}
-
-/*menu responsivo*/
-/* @media (max-width: 1024px){
-    .sidebar{
-        max-width: 200px;
-    }
-}
-
 @media (max-width: 768px){
-    .menu-hamb{
-        display: block;
+
+    .btnInserir{
+        width: 95px;
+        height: 35px;
     }
-    .main-section{
-        padding-top: 110px;
-    }
-    .sidebar{
-        position: fixed;
-        top: 0;
-        left: -310px;
-        height: 100vh;
-        width: 100%;
-        max-width: 300px;
-        transition: 0.2s linear;
+    
+    .search-bar{
+        width: 320px;
+        height: 35px;
     }
 
-    .menu-item.is-active{
-        left: 0;
+    body .sidebar{
+        left: -255px;
     }
-}  */
+
+    body header,
+    .main-section {
+    margin-left: 55px;
+    transition: all 0.5s ease;
+    }
+
+    body.active .sidebar{
+        left: -255px;
+    }
+
+    body.active header,
+    body.active .main-section {
+    margin-left: 55px;
+    transition: all 0.5s ease;
+    }
+
+}
+
+@media (max-width: 375px){
+
+}
