@@ -29,9 +29,21 @@ cardsGroup.forEach((item, i) => {
 
 
 var hambMenu = document.querySelector(".menu-toggle");
+var respHambMenu = document.querySelector(".menu-toggle-2");
+var exitToggle = document.querySelector(".exit-toggle");
 // var bodyC = [...document.querySelectorAll('body')];
 
 hambMenu.addEventListener('click', function() {
     console.log('teste');
     document.querySelector("body").classList.toggle("active");
+})
+
+respHambMenu.addEventListener('click', function(){
+    console.log('teste 2');
+    document.querySelector("body").classList.toggle("respActive");
+})
+
+exitToggle.addEventListener('click', function(){
+    console.log('teste 3');
+    document.querySelector("body").classList.remove("respActive");
 })

@@ -29,7 +29,7 @@ header{
 input.search-bar{
     padding: 0 10px;
     font-size: 14px;
-    border: none;
+    border: solid 1px transparent;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.581);
 }
 
@@ -155,6 +155,14 @@ input.search-bar:focus{
     transition: all 0.5s ease;
 }
 
+.menu-toggle-2 img {
+    display: none;
+}
+
+.exit-toggle img{
+    display: none;
+}
+
 /*sidebar*/
 .sidebar{
     background-color: #1e9f8d;
@@ -215,41 +223,72 @@ body.active .main-section {
     transition: all 0.5s ease;
 }
 
-/*toggle para chamar sidebar*/
-@media (max-width: 768px){
+@media (max-width: 1024px){
 
+    body {
+        width: calc(100% - 30px);
+    }
+
+    .menu-toggle img {
+        display: none;
+    }
+    /* toggle c funcionalidade de exibir o sidebar */
+    .menu-toggle-2 img {
+        display: block;
+        margin: 5px;
+        height: 26px;
+    }
+    
     .btnInserir{
-        width: 95px;
-        height: 35px;
+        width: 130px;
+        height: 40px;
     }
     
     .search-bar{
-        width: 320px;
-        height: 35px;
+        width: 390px;
+        height: 40px;
     }
 
-    body .sidebar{
-        left: -255px;
+    .sidebar{
+        display: none;
+        position: absolute;
+    }
+    
+    .exit-toggle img{
+        display: block;
+        float: right;
+        height: 14px;
+        margin: 25px;
     }
 
-    body header,
-    .main-section {
-    margin-left: 55px;
-    transition: all 0.5s ease;
+    body.respActive .sidebar{
+        display: block;
+        position: absolute;
+        transition: 1s linear;
     }
 
-    body.active .sidebar{
-        left: -255px;
+    .shows-collection {
+        /* width: 625px; */
+        position: static;
     }
 
-    body.active header,
-    body.active .main-section {
-    margin-left: 55px;
-    transition: all 0.5s ease;
+    .shows-collection img{
+        position:static;
+    }
+
+    header{
+        /* width: 610px; */
+        margin: 20px;
+    }
+
+    .main-section{
+        /* width: 63vh; */
+        margin: 20px;
+        padding: 10px 10px;
     }
 
 }
 
-@media (max-width: 375px){
+@media (max-width: 425px){
 
 }
