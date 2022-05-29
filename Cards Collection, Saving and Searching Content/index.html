@@ -33,15 +33,28 @@
         </a>
       </div>
 
-      <div class="search-group">
-        <form>
-          <input
-            type="text"
-            placeholder="Procurar um título..."
-            class="search-bar"
-          />
-          <button id="btnAddShow" class="btnInserir">Salvar</button>
-        </form>
+      <div class="search-container">
+        <div class="search-group">
+  
+            <input type="text" placeholder="Procurar um título..." class="search-bar" id="search-bar" onkeyup="findContent()" onclick="findContent()"/>
+  
+            <div class="search-list" id="search-list">
+              
+              <!-- <div class="search-list-item">
+                <div class="search-item-poster">
+                  <img src="resources/wandavision.jpg" alt="" srcset="">
+                </div>
+                <div class="search-item-desc">
+                  <h3>Wandavision</h3>
+                  <p>2021</p>
+                </div>
+              </div> -->
+
+            </div>
+
+            <!-- <button id="btnAddShow" class="btnInserir">Salvar</button> -->
+        </div>
+  
       </div>
     </header>
 
@@ -70,20 +83,11 @@
     </aside>
 
     <main class="main-section">
+
       <section class="shows-collection">
-        <div class="cards-group">
-          <div class="card">
-            <img src="resources/wandavision.jpg" alt="" class="card-img" />
-            <div class="card-description">
-              <p class="card-title">Wandavision</p>
-              <p>
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eos
-                fugiat, possimus reiciendis minus porro adipisci!
-              </p>
-            </div>
-          </div>
+        <div class="cards-group" id="cards-group">
 
-          <div class="card">
+          <!-- <div class="card">
             <img src="resources/wandavision.jpg" alt="" class="card-img" />
             <div class="card-description">
               <p class="card-title">Wandavision</p>
@@ -92,29 +96,8 @@
                 fugiat, possimus reiciendis minus porro adipisci!
               </p>
             </div>
-          </div>
+          </div> -->
 
-          <div class="card">
-            <img src="resources/wandavision.jpg" alt="" class="card-img" />
-            <div class="card-description">
-              <p class="card-title">Wandavision</p>
-              <p>
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eos
-                fugiat, possimus reiciendis minus porro adipisci!
-              </p>
-            </div>
-          </div>
-
-          <div class="card">
-            <img src="resources/wandavision.jpg" alt="" class="card-img" />
-            <div class="card-description">
-              <p class="card-title">Wandavision</p>
-              <p>
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eos
-                fugiat, possimus reiciendis minus porro adipisci!
-              </p>
-            </div>
-          </div>
         </div>
 
         <div class="btnSlide">
@@ -125,6 +108,7 @@
             chevron_right
           </button>
         </div>
+
       </section>
     </main>
 
