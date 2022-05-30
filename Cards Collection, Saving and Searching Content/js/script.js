@@ -54,14 +54,12 @@ async function loadContent(searchItem){
     const data = await res.json();
 
     if(data.Response == "True") {
-        // console.log(data);
         displayContentList(data.Search);
     }
 }
 
 function findContent(){
     let searchItem = (searchBar.value).trim();
-    console.log(searchItem);
     if(searchItem.length > 0){
         searchList.classList.remove('hide-search-list');
         loadContent(searchItem);
@@ -75,9 +73,12 @@ function displayContentList(content){
     searchList.innerHTML = "";
 
     for(let idx = 0; idx < content.length; idx++){
+        
         let contentListItem = document.createElement('div');
+
         contentListItem.dataset.id = content[idx].imdbID;
         contentListItem.classList.add('search-list-item');
+        
         if(content[idx].Poster != "N/A")
             moviePoster = content[idx].Poster;
         else
@@ -101,17 +102,15 @@ function displayContentList(content){
 
 function loadContentDetails(){
     const searchListContent = searchList.querySelectorAll('.search-list-item');
+
     searchListContent.forEach(content => {
         content.addEventListener('click', async () =>{
-            // console.log(content.dataset.id);
             searchList.classList.add('hide-search-list');
             searchBar.value = "";
             const result = await fetch(`http://www.omdbapi.com/?i=${content.dataset.id}&apikey=60ee3e91`);
             const contentDetails = await result.json();
-            console.log(contentDetails);
             displayContentDetails(contentDetails);
         });
-        // console.log(content);
     });
 }
 
@@ -121,12 +120,8 @@ function displayContentDetails(details){
         <img src="${(details.Poster != "N/A") ? details.Poster: "resources/img-not-found.png"}" alt="" class="card-img" />
         <div class="card-description">
             <p class="card-title">${details.Title}</p>
-            <p>
-            ${(details.Plot)}
-            </p>
+            <p> ${(details.Plot)} </p>
         </div>
     </div>
     `;
 }
-
-// loadContent('lord of the rings');
