@@ -45,6 +45,7 @@ exitToggle.addEventListener('click', function(){
 const searchBar = document.getElementById('search-bar');
 const searchList = document.getElementById('search-list');
 const cardsGroupFlex = document.getElementById ('cards-group');
+const card = document.getElementById ('card');
 
 // loading content from omdb api
 async function loadContent(searchItem){
@@ -115,13 +116,21 @@ function loadContentDetails(){
 }
 
 function displayContentDetails(details){
-    cardsGroupFlex.innerHTML = `
-    <div class="card">
-        <img src="${(details.Poster != "N/A") ? details.Poster: "resources/img-not-found.png"}" alt="" class="card-img" />
-        <div class="card-description">
-            <p class="card-title">${details.Title}</p>
-            <p> ${(details.Plot)} </p>
-        </div>
-    </div>
-    `;
+
+    cardsGroupFlex.innerHTML += `
+        <div class="card"> 
+            <img src="${(details.Poster != "N/A") ? details.Poster: "resources/img-not-found.png"}" alt="" class="card-img" />
+            <div class="card-description">
+              <p class="card-title">${details.Title}
+              <span class="card-year">${details.Year}</span></p>
+              <p class="card-rate">IMDB Rate: ${details.imdbRating}</p>
+              <p>${(details.Plot)}</p>
+              <div class="card-tags">
+                <p>Tags</p>
+                <span>${(details.Genre)} </span>
+                <span>${(details.Type)} </span>
+              </div>
+            </div>
+          </div> 
+        `;
 }
